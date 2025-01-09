@@ -16,6 +16,16 @@ body {
   background-attachment: fixed;
 }
 
+#map-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+iframe {
+  border: 2px solid #e6005c;
+  border-radius: 8px;
+}
+
 /* Envelope Container */
 #envelope-container {
   position: fixed;
