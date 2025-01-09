@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Autoplay blocked by browser.");
   }
 
-
   // Open the envelope and reveal the main content
   openButton.addEventListener('click', () => {
     envelope.classList.add('open');
