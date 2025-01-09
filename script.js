@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Autoplay blocked by browser.");
   }
 
-  // Open the envelope and reveal the main content
+// Open the envelope and reveal the main content
   openButton.addEventListener('click', () => {
     flap.style.transform = 'rotateX(-180deg)'; // Open the flap
     setTimeout(() => {
