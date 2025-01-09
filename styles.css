@@ -39,6 +39,7 @@ body {
   border: 2px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: perspective(800px);
+  cursor: pointer;
 }
 
 #envelope .flap {
@@ -84,12 +85,6 @@ body {
   color: #333;
 }
 
-#envelope .message .gif {
-  width: 150px;
-  height: auto;
-  margin: 10px 0;
-}
-
 #envelope .message button {
   padding: 10px 20px;
   font-size: 1rem;
@@ -98,6 +93,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 #envelope .message button:hover {
@@ -107,13 +103,15 @@ body {
 /* Main Content Hidden Initially */
 #main-content {
   display: none;
+  padding: 20px;
+  text-align: center;
 }
 
 .hidden {
   display: none;
 }
 
-/* Envelope Open Animation */
+/* Flap Opening Animation */
 .open .flap {
   transform: rotateX(-180deg);
 }
