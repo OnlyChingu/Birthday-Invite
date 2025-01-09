@@ -15,13 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Autoplay blocked by browser.");
   }
 
-  // Open the envelope and reveal the main content
+ // Open the envelope and reveal the main content
   openButton.addEventListener('click', () => {
     flap.style.transform = 'rotateX(-180deg)'; // Open the flap
     setTimeout(() => {
-      envelopeContainer.remove(); // Remove the envelope container
-      mainContent.style.display = 'block'; // Show the main content
-      document.body.style.overflow = 'auto'; // Allow scrolling
-    }, 1500); // Wait for animation to complete
+      envelopeContainer.style.opacity = '0'; // Fade out envelope
+      setTimeout(() => {
+        envelopeContainer.style.display = 'none'; // Completely hide envelope
+        mainContent.style.display = 'block'; // Show the main content
+        document.body.style.overflow = 'auto'; // Allow scrolling
+      }, 500); // Wait for fade-out to complete
+    }, 1500); // Wait for flap animation to complete
   });
 });
