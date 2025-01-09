@@ -1,9 +1,9 @@
-
 /* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden; /* Prevent scrolling during animation */
+  overflow: hidden; /* Prevent scrolling during envelope animation */
+  background-color: #f4f4f4;
 }
 
 /* Background Collage */
@@ -68,8 +68,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 
 #envelope .message h1 {
@@ -106,17 +104,14 @@ body {
   text-align: center;
 }
 
+/* Hidden Class */
 .hidden {
   display: none;
 }
 
-/* Flap Opening Animation */
+/* Flap Animation */
 .open .flap {
   transform: rotateX(-180deg);
-}
-
-.open .message {
-  opacity: 1;
 }
 
 .rsvp {
