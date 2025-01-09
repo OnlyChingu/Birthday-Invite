@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const music = document.getElementById('background-music');
 
  // Play background music
-  music.volume = 0.75;
+  music.volume = 0.5;
   music.muted = false;
   try {
     music.play();
