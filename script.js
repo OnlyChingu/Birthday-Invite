@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const music = document.getElementById('background-music');
   const envelope = document.getElementById('envelope');
   const openButton = document.getElementById('open-envelope');
   const mainContent = document.getElementById('main-content');
   const envelopeContainer = document.getElementById('envelope-container');
+  const music = document.getElementById('background-music');
+
 
  // Play background music
   music.volume = 0.75;
