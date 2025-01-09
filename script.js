@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Autoplay blocked by browser.");
   }
 
-// Open the envelope and reveal the main content
+  // Open the envelope and reveal the main content
   openButton.addEventListener('click', () => {
     flap.style.transform = 'rotateX(-180deg)'; // Open the flap
     setTimeout(() => {
-      envelopeContainer.classList.add('hidden'); // Hide the envelope
+      envelopeContainer.remove(); // Remove the envelope container
       mainContent.style.display = 'block'; // Show the main content
       document.body.style.overflow = 'auto'; // Allow scrolling
     }, 1500); // Wait for animation to complete
