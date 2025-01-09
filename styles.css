@@ -22,12 +22,6 @@ body {
   margin-top: 20px;
 }
 
-/* General Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow: hidden; /* Prevent scrolling during animation */
-}
 
 /* Envelope Container */
 #envelope-container {
@@ -129,12 +123,6 @@ body {
   opacity: 1;
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  90% { opacity: 0; }
-  100% { display: none; }
-}
-
 .google-form {
   margin-top: 20px;
 }
@@ -150,22 +138,4 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.music-controls {
-  margin-top: 20px;
-}
-
-.music-controls button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 1rem;
-  background-color: #e6005c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.music-controls button:hover {
-  background-color: #ff4081;
-}
 
