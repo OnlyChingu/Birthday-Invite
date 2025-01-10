@@ -142,12 +142,12 @@ iframe {
   overflow: hidden;
 }
 
-iframe.google-form {
+iframe {
+  border: 2px solid #e6005c;
+  border-radius: 8px;
   width: 100%;
-  height: 600px;
-  border: 0;
-  display: block;
-  margin: 0 auto;
+  max-width: 600px;
+  height: 400px;
 }
 .gif-section {
   margin: 20px 0;
