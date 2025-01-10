@@ -143,12 +143,13 @@ iframe {
   pointer-events: none;
   z-index: 10;
 }
+
 /* Sliding PNG */
 .slide-container {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: auto;
+    
 }
 
 .slide {
@@ -170,8 +171,9 @@ iframe {
 }
 
 .from-bottom {
-    bottom: -200px; /* Starts off-screen */
-    left: calc(50vw - 100px); /* Centers horizontally */
+    bottom: 0; /* Starts off-screen */
+    left: 50%; /* Centers horizontally */
+    transform: translateY(0); /* Adjusted to prevent overlap */
     animation: slideFromBottom 6s infinite;
 }
 
@@ -188,4 +190,9 @@ iframe {
 @keyframes slideFromBottom {
     0%, 100% { transform: translateY(0); bottom: -200px; }
     50% { transform: translateY(-300px); bottom: -200px; }
+}
+
+.rotated-image {
+    transform: rotate(45deg); /* Rotate 45 degrees clockwise */
+    transition: transform 0.5s ease-in-out; /* Optional: Add a smooth transition effect */
 }
