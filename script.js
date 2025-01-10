@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const flap = document.querySelector('#envelope .flap');
   const envelopeContainer = document.getElementById('envelope-container');
   const mainContent = document.getElementById('main-content');
-
+  const footer = document.createElement('footer');
+  footer.style.height = '50px'; // or any fixed height
+  document.body.appendChild(footer);
   openButton.addEventListener('click', () => {
     // Animate the flap to open
     flap.style.transform = 'rotateX(-180deg)';
