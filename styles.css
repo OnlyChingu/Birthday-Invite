@@ -159,7 +159,7 @@ iframe {
 }
 
 .from-left {
-    top: calc(50vh - 200px); /* Centers vertically */
+    top: calc(50vh - 100px); /* Centers vertically */
     left: -200px; /* Starts off-screen */
     animation: slideFromLeft 6s infinite;
 }
@@ -179,12 +179,12 @@ iframe {
 
 @keyframes slideFromLeft {
     0%, 100% { transform: translateX(0); left: -150px; }
-    50% { transform: translateX(200px); left: -150px; }
+    50% { transform: translateX(150px); left: -150px; }
 }
 
 @keyframes slideFromRight {
     0%, 100% { transform: translateX(0); right: -150px; }
-    50% { transform: translateX(-200px); right: -150px; }
+    50% { transform: translateX(-150px); right: -150px; }
 }
 
 @keyframes slideFromBottom {
