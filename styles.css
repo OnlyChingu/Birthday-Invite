@@ -165,7 +165,7 @@ iframe {
 }
 
 .from-right {
-    top: calc(50vh - 100px); /* Centers vertically */
+    top: 0; /* Centers vertically */
     right: -200px; /* Starts off-screen */
     animation: slideFromRight 6s infinite;
 }
