@@ -41,6 +41,7 @@ iframe {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* Envelope Styles */
@@ -126,7 +127,7 @@ iframe {
 }
 
 /* Flap Animation */
-.open .flap {
+#envelope.open .flap {
   transform: rotateX(-180deg);
 }
 
