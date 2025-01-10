@@ -171,7 +171,7 @@ iframe {
 }
 
 .from-bottom {
-    bottom: 0; /* Starts off-screen */
+    bottom: -100px; /* Starts off-screen */
     left: 50%; /* Centers horizontally */
     transform: translateY(0); /* Adjusted to prevent overlap */
     animation: slideFromBottom 6s infinite;
