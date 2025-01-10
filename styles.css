@@ -172,7 +172,7 @@ iframe {
 
 .from-bottom {
     bottom: -100px; /* Starts off-screen */
-    left: 10%; /* Centers horizontally */
+    left: 1%; /* Centers horizontally */
     transform: translateY(0); /* Adjusted to prevent overlap */
     animation: slideFromBottom 10s infinite;
 }
@@ -188,7 +188,7 @@ iframe {
 }
 
 @keyframes slideFromBottom {
-    0%, 100% { transform: translateY(0); bottom: -200px; }
-    50% { transform: translateY(-150px); bottom: -200px; }
+    0%, 100% { transform: translateY(0); bottom: -150px; }
+    50% { transform: translateY(-150px); bottom: -150px; }
 }
 
