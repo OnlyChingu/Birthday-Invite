@@ -5,64 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>28th Birthday Invitation</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      color: #e6005c;
+      margin-top: 20px;
+    }
+
+    p {
+      color: #333;
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    /* Map Container */
+    #map-container {
+      margin: 20px auto;
+      max-width: 90%;
+      position: relative;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* GIF Section */
+    .gif-section {
+      margin: 20px auto;
+    }
+
+    .birthday-gif {
+      max-width: 90%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* RSVP Form */
+    .google-form {
+      margin: 30px auto;
+      max-width: 90%;
+    }
+
+    iframe.google-form {
+      width: 100%;
+      height: 600px;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
   <!-- Envelope Animation -->
   <div id="envelope-container">
-  <div id="envelope">
-    <div class="flap"></div>
-    <div class="body">
-      <div class="message">
-        <h1>You're Invited!</h1>
-        <p>Join me for an unforgettable birthday celebration!</p>
-        <button id="open-envelope">Click Here</button>
+    <div id="envelope">
+      <div class="flap"></div>
+      <div class="body">
+        <div class="message">
+          <h1>You're Invited!</h1>
+          <p>Join me for an unforgettable birthday celebration!</p>
+          <button id="open-envelope">Click Here</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div id="main-content" class="hidden">
-   <!-- Funny GIF #1 -->
+
+  <!-- Main Content -->
+  <div id="main-content" class="hidden">
+    <!-- Funny GIF #1 -->
     <div class="gif-section">
       <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWd1NG1jbTBicHd3aWF5dXRuN3NzNHJmbDR3amw5NTV6bjJ3Z3FkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TH0H4MSuizIoFwX2G5/giphy.gif" alt="Funny Birthday GIF" class="birthday-gif">
     </div>
 
-  <h1>Chingu's Burpday</h1>
-  <p>Join us for dinner, fun, and games!</p>
-  <ul>
-    <li><strong>Location:</strong> Momokoko, 7050 Warden Ave., Markham, ON L3R 5Y3</li>
-    <li><strong>Time:</strong> 5:00 PM, February 8</li>
-    
-     <div id="map-container">
-  <h2>Location</h2>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11514.674652616244!2d-79.34410516538604!3d43.82123171536525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d300418cc983%3A0x4c77848e987e0588!2sMOMOKOKO!5e0!3m2!1sen!2sca!4v1736466769568!5m2!1sen!2sca" 
-    width="600" 
-    height="450" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy">
-  </iframe>
-</div>
-    
-    <li><strong>After Dinner:</strong> Omventure Escape Room and Board Games, 7501 Woodbine Ave #7, Markham, ON L3R 2W1</li>
-    <li><strong>Time:</strong> 7:30 PM, February 8</li>
-    
-   <div id="map-container">
-  <h2>Location</h2>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3953658454593!2d-79.353051223814!3d43.826899571094344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d49d8cd56729%3A0x48af8eff202abf5e!2sOmventure%20Markham!5e0!3m2!1sen!2sca!4v1736465908034!5m2!1sen!2sca" 
-    width="600" 
-    height="450" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy">
-  </iframe>
-</div>
+    <h1>Chingu's Burpday</h1>
+    <p>Join us for dinner, fun, and games!</p>
+    <ul>
+      <li><strong>Location:</strong> Momokoko, 7050 Warden Ave., Markham, ON L3R 5Y3</li>
+      <li><strong>Time:</strong> 5:00 PM, February 8</li>
+    </ul>
 
+    <!-- Map for Momokoko -->
+    <div id="map-container">
+      <h2>Momokoko Location</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11514.674652616244!2d-79.34410516538604!3d43.82123171536525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d300418cc983%3A0x4c77848e987e0588!2sMOMOKOKO!5e0!3m2!1sen!2sca!4v1736466769568!5m2!1sen!2sca" 
+        loading="lazy">
+      </iframe>
+    </div>
 
-  </ul>
-  
-   <!-- Funny GIF #2 -->
+    <ul>
+      <li><strong>After Dinner:</strong> Omventure Escape Room and Board Games, 7501 Woodbine Ave #7, Markham, ON L3R 2W1</li>
+      <li><strong>Time:</strong> 7:30 PM, February 8</li>
+    </ul>
+
+    <!-- Map for Omventure -->
+    <div id="map-container">
+      <h2>Omventure Location</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3953658454593!2d-79.353051223814!3d43.826899571094344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d49d8cd56729%3A0x48af8eff202abf5e!2sOmventure%20Markham!5e0!3m2!1sen!2sca!4v1736465908034!5m2!1sen!2sca" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Funny GIF #2 -->
     <div class="gif-section">
       <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExODNsbTUxYmN4Y3ZoYjE0bGdrMzdwdmVibnZramtpa2FyZTZlZXA2NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TluN63Wgq3ivIqpeqa/giphy.gif" alt="Another Funny Birthday GIF" class="birthday-gif">
     </div>
@@ -71,7 +137,7 @@
 
     <!-- Embedded Google Form -->
     <div class="google-form">
-      <iframe src="https://forms.gle/WTbAxYNXJnh4S7zZ7" width="100%" height="600" frameborder="0"></iframe>
+      <iframe src="https://forms.gle/WTbAxYNXJnh4S7zZ7" class="google-form"></iframe>
     </div>
 
     <!-- Funny GIF #3 -->
@@ -79,12 +145,9 @@
       <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3RvbHcwaWhzZ3YyaDhlOWk5aHg2Nzk5Ymhxc29lNHVwZGp6aGpqdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MVp0FRfyMZcbobezIs/giphy.gif" alt="Another Funny Birthday GIF" class="birthday-gif">
     </div>
   </div>
-</div>
 
-   
-
-   <!-- Background Music -->
-  <audio id="background-music" loop autoplay muted>
+  <!-- Background Music -->
+  <audio id="background-music" loop autoplay>
     <source src="https://raw.githubusercontent.com/OnlyChingu/Birthday-Invite/main/chingu_bday_song.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
