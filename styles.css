@@ -179,12 +179,12 @@ iframe {
 
 @keyframes slideFromLeft {
     0%, 100% { transform: translateX(0); left: -150px; }
-    50% { transform: translateX(300px); left: -150px; }
+    50% { transform: translateX(200px); left: -150px; }
 }
 
 @keyframes slideFromRight {
     0%, 100% { transform: translateX(0); right: -150px; }
-    50% { transform: translateX(-300px); right: -150px; }
+    50% { transform: translateX(-200px); right: -150px; }
 }
 
 @keyframes slideFromBottom {
@@ -192,7 +192,3 @@ iframe {
     50% { transform: translateY(-300px); bottom: -200px; }
 }
 
-.rotated-image {
-    transform: rotate(45deg); /* Rotate 45 degrees clockwise */
-    transition: transform 0.5s ease-in-out; /* Optional: Add a smooth transition effect */
-}
