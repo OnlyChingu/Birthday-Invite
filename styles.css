@@ -2,12 +2,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden; /* Prevent scrolling during envelope animation */
   background-color: #f4f4f4;
+  overflow-y: auto; /* Allow vertical scrolling */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
 /* Background Collage */
@@ -117,7 +116,8 @@ iframe {
   padding: 20px;
   text-align: center;
   max-width: 800px;
-  margin: 0 auto; /* Center content */
+  margin: 0 auto;
+  overflow: auto; /* Allow scrolling */
 }
 
 /* Hidden Class */
@@ -138,17 +138,29 @@ iframe {
 
 .google-form {
   margin-top: 20px;
+  max-width: 90%; /* Adjust for smaller screens */
+  overflow: hidden;
+}
+
+iframe.google-form {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  display: block;
+  margin: 0 auto;
 }
 .gif-section {
   margin: 20px 0;
   text-align: center;
 }
 
-.birthday-gif {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+@media (max-width: 768px) {
+  iframe.google-form {
+    height: 400px; /* Adjust height for smaller screens */
+  }
 
+  .birthday-gif {
+    max-width: 100%; /* Ensure GIFs fit the screen */
+  }
+}
 
