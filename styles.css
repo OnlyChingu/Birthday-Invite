@@ -37,6 +37,8 @@ body::before {
   background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* To ensure the content isn't cut off */
+  z-index: 2;
 }
 
 /* Heading and Content Style */
@@ -107,16 +109,27 @@ iframe {
   animation-duration: 6s;
 }
 
-/* Spread the confetti across different areas */
-.confetti:nth-child(1) { left: 10%; top: -10%; animation-delay: 0s; }
-.confetti:nth-child(2) { left: 20%; top: -15%; animation-delay: 1s; }
-.confetti:nth-child(3) { left: 30%; top: -5%; animation-delay: 2s; }
-.confetti:nth-child(4) { left: 40%; top: -10%; animation-delay: 3s; }
-.confetti:nth-child(5) { left: 50%; top: -20%; animation-delay: 4s; }
-.confetti:nth-child(6) { left: 60%; top: -15%; animation-delay: 5s; }
-.confetti:nth-child(7) { left: 70%; top: -10%; animation-delay: 6s; }
-.confetti:nth-child(8) { left: 80%; top: -5%; animation-delay: 7s; }
-.confetti:nth-child(9) { left: 90%; top: -10%; animation-delay: 8s; }
+/* Randomized Confetti Position */
+.confetti:nth-child(1) { left: 5%; top: -10%; animation-delay: 0s; }
+.confetti:nth-child(2) { left: 10%; top: -20%; animation-delay: 1s; }
+.confetti:nth-child(3) { left: 15%; top: -5%; animation-delay: 2s; }
+.confetti:nth-child(4) { left: 20%; top: -15%; animation-delay: 3s; }
+.confetti:nth-child(5) { left: 25%; top: -10%; animation-delay: 4s; }
+.confetti:nth-child(6) { left: 30%; top: -5%; animation-delay: 5s; }
+.confetti:nth-child(7) { left: 35%; top: -15%; animation-delay: 6s; }
+.confetti:nth-child(8) { left: 40%; top: -10%; animation-delay: 7s; }
+.confetti:nth-child(9) { left: 45%; top: -20%; animation-delay: 8s; }
+.confetti:nth-child(10) { left: 50%; top: -15%; animation-delay: 9s; }
+.confetti:nth-child(11) { left: 55%; top: -10%; animation-delay: 10s; }
+.confetti:nth-child(12) { left: 60%; top: -5%; animation-delay: 11s; }
+.confetti:nth-child(13) { left: 65%; top: -20%; animation-delay: 12s; }
+.confetti:nth-child(14) { left: 70%; top: -15%; animation-delay: 13s; }
+.confetti:nth-child(15) { left: 75%; top: -10%; animation-delay: 14s; }
+.confetti:nth-child(16) { left: 80%; top: -5%; animation-delay: 15s; }
+.confetti:nth-child(17) { left: 85%; top: -15%; animation-delay: 16s; }
+.confetti:nth-child(18) { left: 90%; top: -10%; animation-delay: 17s; }
+.confetti:nth-child(19) { left: 95%; top: -5%; animation-delay: 18s; }
+.confetti:nth-child(20) { left: 100%; top: -20%; animation-delay: 19s; }
 
 /* Confetti Container for Animation */
 .confetti-container {
