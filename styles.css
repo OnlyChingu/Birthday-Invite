@@ -26,20 +26,6 @@ iframe {
   border-radius: 8px;
 }
 
-/* Envelope Container */
-#envelope-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 1000;
-}
-
 /* Envelope Styles */
 #envelope {
   position: relative;
@@ -72,12 +58,14 @@ iframe {
   height: 50%;
   background-color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 #envelope .message {
   text-align: center;
+  margin-top: -10px; /* Adjusts the vertical positioning of the content */
 }
 
 #envelope .message h1 {
@@ -87,20 +75,19 @@ iframe {
 }
 
 #envelope .message p {
-  margin: 10px 0;
+  margin: 10px 0 20px 0; /* Adds spacing between the message and the button */
   font-size: 1rem;
   color: #333;
 }
 
 #envelope .message button {
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 8px 16px; /* Adjusted padding for smaller button size */
+  font-size: 0.9rem;
   background-color: #e6005c;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
 }
 
 #envelope .message button:hover {
