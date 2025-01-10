@@ -1,26 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const envelope = document.getElementById('envelope');
-  const flap = document.querySelector('#envelope .flap');
   const openButton = document.getElementById('open-envelope');
-  const mainContent = document.getElementById('main-content');
+  const flap = document.querySelector('#envelope .flap');
   const envelopeContainer = document.getElementById('envelope-container');
-  const music = document.getElementById('background-music');
- // Play background music
-  music.volume = 0.5;
-  music.muted = false;
-  try {
-    music.play();
-  } catch (err) {
-    console.log("Autoplay blocked by browser.");
-  }
+  const mainContent = document.getElementById('main-content');
 
- // Open the envelope and reveal the main content
-openButton.addEventListener('click', () => {
-    envelope.classList.add('open'); // Add class to open the envelope
+  openButton.addEventListener('click', () => {
+    // Animate the flap to open
+    flap.style.transform = 'rotateX(-180deg)';
+
+    // Hide the envelope container and show the main content
     setTimeout(() => {
-      envelopeContainer.classList.add('hidden'); // Hide the envelope container
-      mainContent.classList.remove('hidden'); // Show the main content
+      envelopeContainer.style.display = 'none';
+      mainContent.style.display = 'block';
       document.body.style.overflow = 'auto'; // Enable scrolling
-    }, 1500); // Wait for flap animation to complete
+    }, 1500); // Wait for the flap animation to complete
   });
 });
