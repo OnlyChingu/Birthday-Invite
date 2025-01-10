@@ -176,13 +176,13 @@ iframe {
 }
 
 @keyframes slideFromLeft {
-    0%, 100% { transform: translateX(0); left: -200px; }
-    50% { transform: translateX(300px); left: -200px; }
+    0%, 100% { transform: translateX(0); left: -150px; }
+    50% { transform: translateX(300px); left: -150px; }
 }
 
 @keyframes slideFromRight {
-    0%, 100% { transform: translateX(0); right: -200px; }
-    50% { transform: translateX(-300px); right: -200px; }
+    0%, 100% { transform: translateX(0); right: -150px; }
+    50% { transform: translateX(-300px); right: -150px; }
 }
 
 @keyframes slideFromBottom {
