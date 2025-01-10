@@ -3,48 +3,25 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  overflow-y: auto; /* Allow vertical scrolling */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Background Collage */
-body {
-  background: url('IMAGE_URL_1') top left / 25% no-repeat,
-              url('IMAGE_URL_2') top right / 25% no-repeat,
-              url('IMAGE_URL_3') bottom left / 25% no-repeat,
-              url('IMAGE_URL_4') bottom right / 25% no-repeat;
-  background-color: #f4f4f4;
-  background-attachment: fixed;
-}
-
-#map-container {
-  margin: 20px 0;
   text-align: center;
-}
-
-iframe {
-  border: 2px solid #e6005c;
-  border-radius: 8px;
+  overflow: hidden; /* Prevent scrolling during the envelope animation */
 }
 
 /* Envelope Container */
 #envelope-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 1000;
-  transition: opacity 0.5s ease-in-out;
 }
 
-/* Envelope Styles */
+/* Envelope */
 #envelope {
   position: relative;
   width: 300px;
@@ -52,7 +29,6 @@ iframe {
   background-color: #fff;
   border: 2px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: perspective(800px);
   overflow: hidden;
 }
 
@@ -76,92 +52,41 @@ iframe {
   height: 50%;
   background-color: #fff;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Start content at the top of the body */
+  justify-content: center;
   align-items: center;
-  padding-top: 20px; /* Adds space above the message */
-}
-
-#envelope .message {
-  text-align: center;
+  flex-direction: column;
 }
 
 #envelope .message h1 {
-  margin: 0;
-  font-size: 1.5rem;
   color: #e6005c;
+  margin: 0;
 }
 
 #envelope .message p {
-  margin: 5px 0 15px 0; /* Adjust spacing above and below the text */
-  font-size: 1rem;
+  margin: 10px 0;
   color: #333;
 }
 
 #envelope .message button {
-  padding: 8px 16px;
-  font-size: 0.9rem;
+  padding: 10px 20px;
   background-color: #e6005c;
   color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 #envelope .message button:hover {
   background-color: #ff4081;
 }
 
-/* Main Content Hidden Initially */
+/* Main Content */
 #main-content {
+  display: none;
   padding: 20px;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: auto; /* Allow scrolling */
 }
 
-/* Hidden Class */
 .hidden {
   display: none;
 }
-
-/* Flap Animation */
-#envelope.open .flap {
-  transform: rotateX(-180deg);
-}
-
-.rsvp {
-  font-size: 1.1rem;
-  color: #333;
-  margin-top: 20px;
-}
-
-.google-form {
-  margin-top: 20px;
-  max-width: 90%; /* Adjust for smaller screens */
-  overflow: hidden;
-}
-
-iframe {
-  border: 2px solid #e6005c;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-}
-.gif-section {
-  margin: 20px 0;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  iframe.google-form {
-    height: 400px; /* Adjust height for smaller screens */
-  }
-
-  .birthday-gif {
-    max-width: 100%; /* Ensure GIFs fit the screen */
-  }
-}
-
