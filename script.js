@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainContent = document.getElementById('main-content');
   const envelopeContainer = document.getElementById('envelope-container');
   const music = document.getElementById('background-music');
-
  // Play background music
   music.volume = 0.5;
   music.muted = false;
@@ -16,15 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
  // Open the envelope and reveal the main content
-  openButton.addEventListener('click', () => {
-  flap.style.transform = 'rotateX(-180deg)'; // Open the flap
-  setTimeout(() => {
-    envelopeContainer.style.opacity = '0'; // Fade out envelope
+openButton.addEventListener('click', () => {
+    envelope.classList.add('open'); // Add class to open the envelope
     setTimeout(() => {
-      envelopeContainer.style.display = 'none'; // Completely hide envelope
-      mainContent.style.display = 'block'; // Show the main content
-      document.body.style.overflow = 'auto'; // Allow scrolling
-      document.body.style.height = 'auto'; // Reset height to fit content
-    }, 500); // Wait for fade-out to complete
-  }, 1500); // Wait for flap animation to complete
+      envelopeContainer.classList.add('hidden'); // Hide the envelope container
+      mainContent.classList.remove('hidden'); // Show the main content
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }, 1500); // Wait for flap animation to complete
+  });
 });
