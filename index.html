@@ -41,21 +41,23 @@
   <!-- Main Content -->
   <div id="main-content">
     <h1>Chingu's 28th Birthday Party!</h1>
-    <p>Join us for an evening of fun, food, and games.</p>
+    <p>Join us for an evening of fun, food, and games. We're celebrating another year of friendship, laughter, and great memories!</p>
     
     <!-- Funny GIF 1 -->
     <div class="gif-section">
       <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWd1NG1jbTBicHd3aWF5dXRuN3NzNHJmbDR3amw5NTV6bjJ3Z3FkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TH0H4MSuizIoFwX2G5/giphy.gif" alt="Funny Birthday GIF" class="birthday-gif">
     </div>
 
+    <!-- Birthday Details -->
+    <h2>Details</h2>
     <ul>
       <li><strong>Location:</strong> Momokoko, 7050 Warden Ave., Markham, ON</li>
       <li><strong>Time:</strong> 5:00 PM, February 8</li>
     </ul>
 
-    <!-- Map for Momokoko -->
+    <!-- Google Map for Momokoko -->
     <div id="map-container">
-      <h2>Momokoko Location</h2>
+      <h3>Momokoko Location</h3>
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11514.674652616244!2d-79.34410516538604!3d43.82123171536525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d300418cc983%3A0x4c77848e987e0588!2sMOMOKOKO!5e0!3m2!1sen!2sca!4v1736466769568!5m2!1sen!2sca" 
         width="100%" 
@@ -64,14 +66,15 @@
       </iframe>
     </div>
 
+    <h2>After Dinner</h2>
     <ul>
-      <li><strong>After Dinner:</strong> Omventure Escape Room and Board Games, 7501 Woodbine Ave #7, Markham, ON</li>
+      <li><strong>Location:</strong> Omventure Escape Room and Board Games, 7501 Woodbine Ave #7, Markham, ON</li>
       <li><strong>Time:</strong> 7:30 PM, February 8</li>
     </ul>
 
-    <!-- Map for Omventure -->
+    <!-- Google Map for Omventure -->
     <div id="map-container">
-      <h2>Omventure Location</h2>
+      <h3>Omventure Location</h3>
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3953658454593!2d-79.353051223814!3d43.826899571094344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d36f7c6f379f%3A0x440c63ab02f6e0e1!2sOmventure%20Escape%20Room%20%26%20Board%20Games!5e0!3m2!1sen!2sca!4v1673145399477!5m2!1sen!2sca" 
         width="100%" 
@@ -79,6 +82,39 @@
         style="border: 2px solid #e6005c; border-radius: 8px;">
       </iframe>
     </div>
+
+    <!-- RSVP Section -->
+    <div class="rsvp">
+      <h3>RSVP</h3>
+      <p>Please let us know if you can attend. We can't wait to celebrate with you!</p>
+      <a href="https://forms.gle/example" target="_blank" class="rsvp-button">RSVP Here</a>
+    </div>
+
+    <!-- Gift Suggestions -->
+    <h3>Gift Ideas</h3>
+    <ul>
+      <li>Gift Cards (Amazon, Etsy, or local stores)</li>
+      <li>Books, especially fiction or fantasy</li>
+      <li>Board games or card games for game night</li>
+      <li>Anything that brings joy and laughter!</li>
+    </ul>
+
+    <!-- Funny GIF 2 -->
+    <div class="gif-section">
+      <img src="https://i.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Another Funny GIF" class="birthday-gif">
+    </div>
   </div>
+
+  <!-- Confetti Animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const confettiContainer = document.querySelector('.confetti-container');
+      for (let i = 0; i < 20; i++) {
+        const confettiPiece = document.createElement('div');
+        confettiPiece.classList.add('confetti');
+        confettiContainer.appendChild(confettiPiece);
+      }
+    });
+  </script>
 </body>
 </html>
