@@ -159,7 +159,7 @@ iframe {
 }
 
 .from-left {
-    bottom: 0px; /* Centers vertically */
+    bottom: 200px; /* Centers vertically */
     left: -200px; /* Starts off-screen */
     animation: slideFromLeft 6s infinite;
 }
@@ -172,7 +172,7 @@ iframe {
 
 .from-bottom {
     bottom: -100px; /* Starts off-screen */
-    left: 20%; /* Centers horizontally */
+    left: 10%; /* Centers horizontally */
     transform: translateY(0); /* Adjusted to prevent overlap */
     animation: slideFromBottom 10s infinite;
 }
