@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Confetti Container for Animation -->
+  <div class="confetti-container">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+
   <!-- Background Music -->
   <audio id="background-music" loop autoplay>
     <source src="https://raw.githubusercontent.com/OnlyChingu/Birthday-Invite/main/chingu_bday_song.mp3" type="audio/mpeg">
@@ -78,18 +90,4 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const music = document.getElementById('background-music');
-
-      // Set the volume to 0.2 (20% of full volume)
-      music.volume = 0.2;
-
-      // Attempt to play music, handle potential autoplay restrictions
-      try {
-        music.play();
-      } catch (err) {
-        console.log("Autoplay blocked by browser.");
-      }
-    });
-  </script>
-</body>
-</html>
+      const music = document
