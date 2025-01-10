@@ -9,9 +9,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh; /* Allow content to be visible */
   text-align: center;
-  overflow: auto; /* Allow scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 /* Background Image with Confetti Effect */
@@ -33,12 +34,13 @@ body::before {
   z-index: 1; /* Ensure the main content is above the background */
   padding: 20px;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  position: relative; /* To ensure the content isn't cut off */
+  position: relative;
   z-index: 2;
+  flex-grow: 1; /* Allow content to expand and fill available space */
 }
 
 /* Heading and Content Style */
