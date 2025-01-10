@@ -4,89 +4,31 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   text-align: center;
-  overflow: hidden; /* Prevent scrolling during the envelope animation */
 }
 
-/* Envelope Container */
-#envelope-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* Envelope */
-#envelope {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-#envelope .flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-color: #e6005c;
-  transform-origin: top;
-  transform: rotateX(0deg);
-  transition: transform 1s ease-in-out;
-}
-
-#envelope .body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#envelope .message h1 {
-  color: #e6005c;
-  margin: 0;
-}
-
-#envelope .message p {
-  margin: 10px 0;
-  color: #333;
-}
-
-#envelope .message button {
-  padding: 10px 20px;
-  background-color: #e6005c;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#envelope .message button:hover {
-  background-color: #ff4081;
-}
-
-/* Main Content */
 #main-content {
-  display: none;
   padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.hidden {
-  display: none;
+h1 {
+  color: #e6005c;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+iframe {
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
