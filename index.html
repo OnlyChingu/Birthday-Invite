@@ -51,5 +51,21 @@
       <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3RvbHcwaWhzZ3YyaDhlOWk5aHg2Nzk5Ymhxc29lNHVwZGp6aGpqdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MVp0FRfyMZcbobezIs/giphy.gif" alt="Another Funny Birthday GIF" class="birthday-gif">
     </div>
   </div>
+  
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const music = document.getElementById('background-music');
+
+      // Set the volume to 0.2 (20% of full volume)
+      music.volume = 0.2;
+
+      // Attempt to play music, handle potential autoplay restrictions
+      try {
+        music.play();
+      } catch (err) {
+        console.log("Autoplay blocked by browser.");
+      }
+    });
+  </script>
 </body>
 </html>
