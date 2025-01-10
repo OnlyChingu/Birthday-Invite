@@ -13,7 +13,11 @@ body {
   min-height: 100vh; /* Allow content to be visible */
   text-align: center;
   overflow-y: auto; /* Allow vertical scrolling */
-  max-height: calc(100vh - 40px); /* 20px padding top and bottom */
+  padding: 0;
+  max-height: calc(100vh - 40px);
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Background Image with Confetti Effect */
@@ -42,6 +46,8 @@ body::before {
   position: relative;
   z-index: 2;
   flex-grow: 1; /* Allow content to expand and fill available space */
+  height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 
 /* Heading and Content Style */
