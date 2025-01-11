@@ -173,7 +173,7 @@ iframe {
 
 .from-right {
     top: 0; /* Centers vertically */
-    right: -200px; /* Starts off-screen */
+    left: -200px; /* Starts off-screen */
     animation: slideFromRight 6s infinite;
 }
 
