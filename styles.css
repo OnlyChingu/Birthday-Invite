@@ -166,7 +166,7 @@ iframe {
 }
 
 .from-left {
-    bottom: 100px; /* Centers vertically */
+    bottom: 0px; /* Centers vertically */
     left: -200px; /* Starts off-screen */
     animation: slideFromLeft 6s infinite;
 }
