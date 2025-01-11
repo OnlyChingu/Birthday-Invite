@@ -17,4 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = 'auto'; // Enable scrolling
     }, 1500); // Wait for the flap animation to complete
   });
+  // Add a fallback for non-touch devices
+  openButton.addEventListener('click', () => {
+    // Animate the flap to open
+    flap.style.transform = 'rotateX(-180deg)';
+    // Optimize animations for mobile devices
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  if (isMobile) {
+    // Use a shorter animation duration for mobile devices
+    flap.style.transitionDuration = '0.5s';
+  }
 });
